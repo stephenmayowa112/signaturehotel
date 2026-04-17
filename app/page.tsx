@@ -14,20 +14,21 @@ export default function HomePage() {
       <main>
         {/* Hero Section */}
         <section 
-          className="relative h-screen flex items-center justify-center bg-cover bg-center text-white"
+          className="relative h-screen flex items-center justify-center bg-cover bg-center text-white overflow-hidden"
           style={{ backgroundImage: "url('/images/45788.jpg')" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-[#342208]/65 to-black/80"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(225,183,78,0.25),transparent_40%),radial-gradient(circle_at_85%_70%,rgba(225,183,78,0.18),transparent_48%)]"></div>
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-gilda mb-6 animate-fade-in-up">
+            <h1 className="text-5xl md:text-7xl font-gilda mb-6 animate-fade-in-up leading-tight drop-shadow-[0_10px_32px_rgba(0,0,0,0.55)]">
               Signature Int'l Hotel Royal Ltd
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 animate-fade-in-up animate-delay-200">
+            <p className="text-xl md:text-2xl mb-8 text-[#f3e3c1] animate-fade-in-up animate-delay-200 leading-relaxed">
               Experience world-class hospitality with premium accommodations and exceptional service designed for discerning guests.
             </p>
             <Link 
               href="/rooms" 
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded text-lg hover:bg-primary-dark transition-all duration-300 hover:scale-105 animate-fade-in-up animate-delay-400"
+              className="inline-flex items-center gap-2 luxury-button px-8 py-4 rounded-md text-lg font-semibold transition-all duration-300 hover:scale-105 animate-fade-in-up animate-delay-400"
             >
               Explore Rooms <ArrowRight size={20} />
             </Link>
@@ -35,27 +36,27 @@ export default function HomePage() {
         </section>
 
         {/* Welcome Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 luxury-soft-section">
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-in-left">
                 <h2 className="text-4xl md:text-5xl font-gilda mb-6 text-gray-900">
                   Welcome to Signature Int'l Hotel
                 </h2>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-[#4d3f28] mb-4 leading-relaxed">
                   Discover our carefully curated selection of premium rooms, from Signature Superior to Business Class accommodations. Each room is designed with your comfort and productivity in mind.
                 </p>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-[#4d3f28] mb-6 leading-relaxed">
                   Whether you're here for business or leisure, Signature Int'l Hotel Royal Ltd offers world-class facilities including a swimming pool, restaurant, conference hall, and more.
                 </p>
                 <Link 
                   href="/about" 
-                  className="inline-flex items-center gap-2 text-primary hover:gap-4 transition-all duration-300 font-semibold"
+                  className="inline-flex items-center gap-2 text-primary-dark hover:gap-4 transition-all duration-300 font-semibold"
                 >
                   Learn More <ArrowRight size={18} />
                 </Link>
               </div>
-              <div className="bg-gray-200 h-96 rounded-lg overflow-hidden animate-slide-in-right hover-lift">
+              <div className="h-96 rounded-2xl overflow-hidden animate-slide-in-right hover-lift border border-primary/30 shadow-[0_24px_44px_-22px_rgba(114,78,12,0.45)]">
                 <img 
                   src="/images/2026/01/welcome-1.webp" 
                   alt="Hotel Interior" 
@@ -67,64 +68,64 @@ export default function HomePage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <section className="py-20 px-4 bg-gradient-to-b from-[#fffefb] via-[#fff8ea] to-[#fffefb]">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12 animate-fade-in-up">
               <h2 className="text-4xl md:text-5xl font-gilda mb-4 text-gray-900">
                 Our Facilities
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-[#5f4b2b] max-w-2xl mx-auto">
                 Experience world-class amenities designed to make your stay comfortable and memorable
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-100">
+              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-100">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaSwimmingPool className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Swimming Pool</h3>
-                <p className="text-gray-600">Relax and unwind in our pristine swimming pool</p>
+                <p className="text-[#5f4b2b]">Relax and unwind in our pristine swimming pool</p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-200">
+              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-200">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaCouch className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Open Lounge</h3>
-                <p className="text-gray-600">Comfortable lounge area for relaxation and socializing</p>
+                <p className="text-[#5f4b2b]">Comfortable lounge area for relaxation and socializing</p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-300">
+              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-300">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaFutbol className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Football Pitch</h3>
-                <p className="text-gray-600">Full-size football pitch for sports enthusiasts</p>
+                <p className="text-[#5f4b2b]">Full-size football pitch for sports enthusiasts</p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-400">
+              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-400">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaUtensils className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Restaurant</h3>
-                <p className="text-gray-600">Fine dining with exquisite local and international cuisine</p>
+                <p className="text-[#5f4b2b]">Fine dining with exquisite local and international cuisine</p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-500">
+              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-500">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaBuilding className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Conference Hall</h3>
-                <p className="text-gray-600">Modern conference facilities for business meetings and events</p>
+                <p className="text-[#5f4b2b]">Modern conference facilities for business meetings and events</p>
               </div>
 
-              <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-600">
+              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-600">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaGlassCheers className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Club</h3>
-                <p className="text-gray-600">Exclusive club for entertainment and leisure</p>
+                <p className="text-[#5f4b2b]">Exclusive club for entertainment and leisure</p>
               </div>
             </div>
           </div>
@@ -142,7 +143,7 @@ export default function HomePage() {
             </p>
             <Link 
               href="/rooms" 
-              className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg animate-fade-in-up animate-delay-400"
+              className="inline-flex items-center gap-2 luxury-button-light px-8 py-4 rounded-md text-lg font-semibold transition-all duration-300 hover:scale-105 animate-fade-in-up animate-delay-400"
             >
               View Available Rooms <ArrowRight size={20} />
             </Link>
@@ -156,7 +157,7 @@ export default function HomePage() {
               <h2 className="text-4xl md:text-5xl font-gilda mb-4 text-gray-900">
                 Gallery
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-[#5f4b2b] max-w-2xl mx-auto">
                 Take a visual tour of our beautiful hotel and facilities
               </p>
             </div>
@@ -165,7 +166,7 @@ export default function HomePage() {
               {[1, 2, 3, 4, 5, 6, 7, 8].map((num, index) => (
                 <div 
                   key={num} 
-                  className={`relative h-48 overflow-hidden rounded-lg group hover-lift animate-fade-in-up`}
+                  className={`relative h-48 overflow-hidden rounded-xl group hover-lift animate-fade-in-up border border-primary/30 shadow-[0_18px_36px_-24px_rgba(116,79,12,0.45)]`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <img 
@@ -181,7 +182,7 @@ export default function HomePage() {
             <div className="text-center mt-8 animate-fade-in-up animate-delay-600">
               <Link 
                 href="/gallery" 
-                className="inline-flex items-center gap-2 text-primary hover:gap-4 transition-all duration-300 font-semibold"
+                className="inline-flex items-center gap-2 text-primary-dark hover:gap-4 transition-all duration-300 font-semibold"
               >
                 View Full Gallery <ArrowRight size={18} />
               </Link>

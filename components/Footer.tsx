@@ -3,13 +3,14 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="relative overflow-hidden bg-gradient-to-br from-[#120d05] via-[#24180a] to-[#3b2810] text-[#f5ead0] border-t border-primary/35">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(216,172,70,0.18),transparent_46%),radial-gradient(circle_at_80%_100%,rgba(216,172,70,0.16),transparent_48%)]"></div>
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
             <h3 className="text-2xl font-gilda text-white mb-4">Signature Int'l Hotel</h3>
-            <p className="text-sm">
+            <p className="text-sm text-[#e7d5ab] leading-relaxed">
               Experience world-class hospitality with premium accommodations and exceptional service designed for discerning guests.
             </p>
           </div>
@@ -18,11 +19,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/rooms" className="hover:text-primary transition">Rooms</Link></li>
-              <li><Link href="/about" className="hover:text-primary transition">About Us</Link></li>
-              <li><Link href="/facilities" className="hover:text-primary transition">Facilities</Link></li>
-              <li><Link href="/gallery" className="hover:text-primary transition">Gallery</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition">Contact</Link></li>
+              <li><Link href="/rooms" className="text-[#e7d5ab] hover:text-[#ffdf96] transition">Rooms</Link></li>
+              <li><Link href="/about" className="text-[#e7d5ab] hover:text-[#ffdf96] transition">About Us</Link></li>
+              <li><Link href="/facilities" className="text-[#e7d5ab] hover:text-[#ffdf96] transition">Facilities</Link></li>
+              <li><Link href="/gallery" className="text-[#e7d5ab] hover:text-[#ffdf96] transition">Gallery</Link></li>
+              <li><Link href="/contact" className="text-[#e7d5ab] hover:text-[#ffdf96] transition">Contact</Link></li>
             </ul>
           </div>
 
@@ -30,16 +31,16 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
             <ul className="space-y-3">
-              <li className="flex items-start gap-2">
-                <MapPin size={18} className="mt-1 flex-shrink-0" />
+              <li className="flex items-start gap-2 text-[#e7d5ab]">
+                <MapPin size={18} className="mt-1 flex-shrink-0 text-primary" />
                 <span className="text-sm">123 Hotel Street, City, Country</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone size={18} />
+              <li className="flex items-center gap-2 text-[#e7d5ab]">
+                <Phone size={18} className="text-primary" />
                 <span className="text-sm">+1 234 567 8900</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail size={18} />
+              <li className="flex items-center gap-2 text-[#e7d5ab]">
+                <Mail size={18} className="text-primary" />
                 <span className="text-sm">info@rivora.com</span>
               </li>
             </ul>
@@ -49,17 +50,17 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-primary transition" aria-label="Facebook">
+              <a href="#" className="w-10 h-10 rounded-full border border-primary/45 bg-white/5 flex items-center justify-center text-[#f6e3b7] hover:text-[#ffdf96] hover:border-primary transition" aria-label="Facebook">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
               </a>
-              <a href="#" className="hover:text-primary transition" aria-label="Instagram">
+              <a href="#" className="w-10 h-10 rounded-full border border-primary/45 bg-white/5 flex items-center justify-center text-[#f6e3b7] hover:text-[#ffdf96] hover:border-primary transition" aria-label="Instagram">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
               </a>
-              <a href="#" className="hover:text-primary transition" aria-label="Twitter">
+              <a href="#" className="w-10 h-10 rounded-full border border-primary/45 bg-white/5 flex items-center justify-center text-[#f6e3b7] hover:text-[#ffdf96] hover:border-primary transition" aria-label="Twitter">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                 </svg>
@@ -68,7 +69,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+        <div className="relative z-10 border-t border-primary/30 mt-8 pt-8 text-center text-sm text-[#dfc995]">
           <p>&copy; {new Date().getFullYear()} Signature Int'l Hotel Royal Ltd. All rights reserved.</p>
         </div>
       </div>

@@ -62,12 +62,12 @@ export default function FacilitiesPage() {
       
       <main className="pt-20">
         {/* Page Header */}
-        <section className="bg-gray-900 text-white py-20 px-4">
+        <section className="luxury-page-header text-white py-20 px-4">
           <div className="container mx-auto max-w-6xl text-center">
             <h1 className="text-5xl md:text-6xl font-gilda mb-4">
               Our Facilities
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-[#f1dfb8]">
               World-class amenities designed for your comfort
             </p>
           </div>
@@ -80,12 +80,12 @@ export default function FacilitiesPage() {
               {facilities.map((facility, index) => {
                 const Icon = facility.icon
                 return (
-                  <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                  <div key={index} className="luxury-card p-8">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                       <Icon className="text-primary" size={32} />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">{facility.title}</h3>
-                    <p className="text-gray-600">{facility.description}</p>
+                    <p className="text-[#5e4a2a]">{facility.description}</p>
                   </div>
                 )
               })}
@@ -94,14 +94,14 @@ export default function FacilitiesPage() {
         </section>
 
         {/* Additional Info */}
-        <section className="py-20 px-4 bg-gray-50">
+        <section className="py-20 px-4 luxury-soft-section">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-3xl font-gilda mb-6">More Than Just Amenities</h2>
-            <p className="text-gray-600 leading-relaxed mb-8">
+            <p className="text-[#5b4728] leading-relaxed mb-8">
               At Signature Int'l Hotel Royal Ltd, we believe in providing experiences that go beyond standard hotel amenities. 
               Our facilities are designed to cater to both business and leisure travelers, ensuring a comfortable and productive stay.
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-[#5b4728] leading-relaxed">
               From our swimming pool and football pitch to our modern conference hall and fine dining restaurant, 
               every facility is maintained to the highest standards. Our dedicated staff is always available to ensure 
               you make the most of your stay with us.

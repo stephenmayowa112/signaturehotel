@@ -8,7 +8,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 luxury-nav-shell transition-all duration-300">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -22,33 +22,15 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-primary transition-colors duration-300 relative group">
-              Home
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link href="/rooms" className="text-white hover:text-primary transition-colors duration-300 relative group">
-              Rooms
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link href="/about" className="text-white hover:text-primary transition-colors duration-300 relative group">
-              About
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link href="/facilities" className="text-white hover:text-primary transition-colors duration-300 relative group">
-              Facilities
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link href="/gallery" className="text-white hover:text-primary transition-colors duration-300 relative group">
-              Gallery
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link href="/contact" className="text-white hover:text-primary transition-colors duration-300 relative group">
-              Contact
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+            <Link href="/" className="luxury-nav-link">Home</Link>
+            <Link href="/rooms" className="luxury-nav-link">Rooms</Link>
+            <Link href="/about" className="luxury-nav-link">About</Link>
+            <Link href="/facilities" className="luxury-nav-link">Facilities</Link>
+            <Link href="/gallery" className="luxury-nav-link">Gallery</Link>
+            <Link href="/contact" className="luxury-nav-link">Contact</Link>
             <Link 
               href="/rooms#book" 
-              className="bg-primary text-white px-6 py-2 rounded hover:bg-primary-dark transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
+              className="luxury-button px-6 py-2 rounded-md font-semibold transition-all duration-300 hover:scale-105"
             >
               Book Now
             </Link>
@@ -56,7 +38,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white transition-transform duration-300 hover:scale-110"
+            className="md:hidden text-primary-dark transition-transform duration-300 hover:scale-110"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -65,29 +47,29 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-700 animate-fade-in">
+          <nav className="md:hidden py-4 border-t border-primary/30 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-white hover:text-primary transition-colors duration-300">
+              <Link href="/" className="luxury-nav-link">
                 Home
               </Link>
-              <Link href="/rooms" className="text-white hover:text-primary transition-colors duration-300">
+              <Link href="/rooms" className="luxury-nav-link">
                 Rooms
               </Link>
-              <Link href="/about" className="text-white hover:text-primary transition-colors duration-300">
+              <Link href="/about" className="luxury-nav-link">
                 About
               </Link>
-              <Link href="/facilities" className="text-white hover:text-primary transition-colors duration-300">
+              <Link href="/facilities" className="luxury-nav-link">
                 Facilities
               </Link>
-              <Link href="/gallery" className="text-white hover:text-primary transition-colors duration-300">
+              <Link href="/gallery" className="luxury-nav-link">
                 Gallery
               </Link>
-              <Link href="/contact" className="text-white hover:text-primary transition-colors duration-300">
+              <Link href="/contact" className="luxury-nav-link">
                 Contact
               </Link>
               <Link 
                 href="/rooms#book" 
-                className="bg-primary text-white px-6 py-2 rounded hover:bg-primary-dark transition-all duration-300 text-center"
+                className="luxury-button px-6 py-2 rounded-md font-semibold transition-all duration-300 text-center"
               >
                 Book Now
               </Link>
