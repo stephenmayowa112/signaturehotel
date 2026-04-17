@@ -83,53 +83,53 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-100">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+            <div className="facility-grid grid md:grid-cols-3 gap-8">
+              <div className="facility-card luxury-card group p-8 text-center animate-fade-in-up animate-delay-100">
+                <div className="facility-icon-shell inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <FaSwimmingPool className="text-primary" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Swimming Pool</h3>
-                <p className="text-[#5f4b2b]">Relax and unwind in our pristine swimming pool</p>
+                <h3 className="facility-card-title text-xl font-semibold mb-2">Swimming Pool</h3>
+                <p className="facility-card-copy text-[#5f4b2b]">Relax and unwind in our pristine swimming pool</p>
               </div>
 
-              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-200">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+              <div className="facility-card luxury-card group p-8 text-center animate-fade-in-up animate-delay-200">
+                <div className="facility-icon-shell inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <FaCouch className="text-primary" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Open Lounge</h3>
-                <p className="text-[#5f4b2b]">Comfortable lounge area for relaxation and socializing</p>
+                <h3 className="facility-card-title text-xl font-semibold mb-2">Open Lounge</h3>
+                <p className="facility-card-copy text-[#5f4b2b]">Comfortable lounge area for relaxation and socializing</p>
               </div>
 
-              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+              <div className="facility-card luxury-card group p-8 text-center animate-fade-in-up animate-delay-300">
+                <div className="facility-icon-shell inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <FaFutbol className="text-primary" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Football Pitch</h3>
-                <p className="text-[#5f4b2b]">Full-size football pitch for sports enthusiasts</p>
+                <h3 className="facility-card-title text-xl font-semibold mb-2">Football Pitch</h3>
+                <p className="facility-card-copy text-[#5f4b2b]">Full-size football pitch for sports enthusiasts</p>
               </div>
 
-              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-400">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+              <div className="facility-card luxury-card group p-8 text-center animate-fade-in-up animate-delay-400">
+                <div className="facility-icon-shell inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <FaUtensils className="text-primary" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Restaurant</h3>
-                <p className="text-[#5f4b2b]">Fine dining with exquisite local and international cuisine</p>
+                <h3 className="facility-card-title text-xl font-semibold mb-2">Restaurant</h3>
+                <p className="facility-card-copy text-[#5f4b2b]">Fine dining with exquisite local and international cuisine</p>
               </div>
 
-              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-500">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+              <div className="facility-card luxury-card group p-8 text-center animate-fade-in-up animate-delay-500">
+                <div className="facility-icon-shell inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <FaBuilding className="text-primary" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Conference Hall</h3>
-                <p className="text-[#5f4b2b]">Modern conference facilities for business meetings and events</p>
+                <h3 className="facility-card-title text-xl font-semibold mb-2">Conference Hall</h3>
+                <p className="facility-card-copy text-[#5f4b2b]">Modern conference facilities for business meetings and events</p>
               </div>
 
-              <div className="luxury-card p-8 text-center hover-lift animate-fade-in-up animate-delay-600">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+              <div className="facility-card luxury-card group p-8 text-center animate-fade-in-up animate-delay-600">
+                <div className="facility-icon-shell inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <FaGlassCheers className="text-primary" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Club</h3>
-                <p className="text-[#5f4b2b]">Exclusive club for entertainment and leisure</p>
+                <h3 className="facility-card-title text-xl font-semibold mb-2">Club</h3>
+                <p className="facility-card-copy text-[#5f4b2b]">Exclusive club for entertainment and leisure</p>
               </div>
             </div>
           </div>
