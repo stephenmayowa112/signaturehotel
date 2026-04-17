@@ -13,6 +13,8 @@ interface Room {
   bed_type: string
   amenities: string[]
   images: string[]
+  availableCount?: number
+  roomNumbers?: string[]
 }
 
 export default function RoomCard({ room }: { room: Room }) {
@@ -42,9 +44,11 @@ export default function RoomCard({ room }: { room: Room }) {
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-2xl font-gilda">{room.name}</h3>
-          <span className="text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
-            Room {room.room_number}
-          </span>
+          {room.availableCount && (
+            <span className="text-sm font-semibold text-green-700 bg-green-100 px-3 py-1 rounded-full">
+              {room.availableCount} Available
+            </span>
+          )}
         </div>
         <p className="text-[#5e4a2a] mb-4 line-clamp-2">{room.description}</p>
 

@@ -12,6 +12,20 @@ export default async function RoomsPage() {
     .eq('is_available', true)
     .order('price_per_night', { ascending: true })
 
+  // Group rooms by category and get one representative from each
+  const roomCategories = rooms?.reduce((acc: any[], room: any) => {
+    if (!acc.find(r => r.name === room.name)) {
+      // Get all room numbers for this category
+      const categoryRooms = rooms.filter(r => r.name === room.name && r.is_available)
+      acc.push({
+        ...room,
+        availableCount: categoryRooms.length,
+        roomNumbers: categoryRooms.map(r => r.room_number).sort()
+      })
+    }
+    return acc
+  }, [])
+
   return (
     <>
       <Header />
@@ -36,9 +50,9 @@ export default async function RoomsPage() {
               <div className="text-center text-red-600">
                 <p>Error loading rooms. Please try again later.</p>
               </div>
-            ) : rooms && rooms.length > 0 ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {rooms.map((room) => (
+            ) : roomCategories && roomCategories.length > 0 ? (
+              <div className="grid md:grid-cols-2 gap-8">
+                {roomCategories.map((room) => (
                   <RoomCard key={room.id} room={room} />
                 ))}
               </div>

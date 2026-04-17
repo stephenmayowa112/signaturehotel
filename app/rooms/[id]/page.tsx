@@ -20,6 +20,14 @@ export default async function RoomDetailPage({ params }: { params: Promise<{ id:
     notFound()
   }
 
+  // Get all available rooms in the same category
+  const { data: availableRooms } = await supabase
+    .from('rooms')
+    .select('id, room_number, is_available')
+    .eq('name', room.name)
+    .eq('is_available', true)
+    .order('room_number', { ascending: true })
+
   // Map room names to image files
   const roomImageMap: { [key: string]: string } = {
     'Signature Superior': '/images/2026/01/room-1.webp',
@@ -102,7 +110,7 @@ export default async function RoomDetailPage({ params }: { params: Promise<{ id:
                     <div className="text-[#6b5635]">per night</div>
                   </div>
                   
-                  <BookingForm room={room} />
+                  <BookingForm room={room} availableRooms={availableRooms || []} />
                 </div>
               </div>
             </div>
