@@ -84,11 +84,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .luxury-nav-link {
-  color: #2b2110;
+  color: #f6e5be;
   font-weight: 500;
   letter-spacing: 0.02em;
   position: relative;
-  transition: color 0.3s ease;
+  text-shadow: 0 1px 10px rgba(170, 125, 35, 0.26);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .luxury-nav-link::after {
@@ -105,7 +106,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .luxury-nav-link:hover {
-  color: var(--color-primary-dark);
+  color: #ffe7ad;
+  text-shadow: 0 1px 14px rgba(227, 182, 86, 0.45);
 }
 
 .luxury-nav-link:hover::after {
