@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Users, Maximize } from 'lucide-react'
+import { Users } from 'lucide-react'
 import { formatCurrency } from '@/lib/utils'
 
 interface Room {
@@ -26,14 +26,15 @@ export default function RoomCard({ room }: { room: Room }) {
   const roomImage = roomImageMap[room.name] || '/images/2026/01/room-1.webp'
 
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover-lift transition-all duration-300">
       {/* Room Image */}
-      <div className="relative h-64 bg-gray-200">
+      <div className="relative h-64 bg-gray-200 overflow-hidden group">
         <img 
           src={roomImage} 
           alt={room.name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
 
       {/* Room Details */}
@@ -46,10 +47,6 @@ export default function RoomCard({ room }: { room: Room }) {
           <div className="flex items-center gap-1">
             <Users size={16} />
             <span>{room.max_guests} Guests</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Maximize size={16} />
-            <span>{room.size_sqm} m²</span>
           </div>
         </div>
 
@@ -82,7 +79,7 @@ export default function RoomCard({ room }: { room: Room }) {
           </div>
           <Link 
             href={`/rooms/${room.id}`}
-            className="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-90 transition"
+            className="bg-primary text-white px-6 py-2 rounded hover:bg-primary-dark transition-all duration-300 hover:scale-105"
           >
             Book Now
           </Link>

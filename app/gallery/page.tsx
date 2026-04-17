@@ -25,14 +25,18 @@ export default function GalleryPage() {
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {galleryImages.map((num) => (
-                <div key={num} className="relative h-80 overflow-hidden rounded-lg group cursor-pointer">
+              {galleryImages.map((num, index) => (
+                <div 
+                  key={num} 
+                  className={`relative h-80 overflow-hidden rounded-lg group cursor-pointer hover-lift animate-fade-in-up`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
                   <img 
                     src={`/images/2026/01/gallery-${num}.webp`}
                     alt={`Gallery ${num}`}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               ))}
             </div>

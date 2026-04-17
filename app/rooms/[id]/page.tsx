@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import { createClient } from '@/lib/supabase/server'
 import { notFound } from 'next/navigation'
 import BookingForm from '@/components/BookingForm'
-import { Users, Maximize, Bed } from 'lucide-react'
+import { Users, Bed } from 'lucide-react'
 import { formatCurrency } from '@/lib/utils'
 
 export default async function RoomDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -65,16 +65,11 @@ export default async function RoomDetailPage({ params }: { params: Promise<{ id:
                 </div>
 
                 {/* Room Info */}
-                <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="bg-gray-50 p-4 rounded-lg text-center">
                     <Users className="mx-auto mb-2 text-primary" size={24} />
                     <p className="text-sm text-gray-600">Max Guests</p>
                     <p className="font-semibold">{room.max_guests}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg text-center">
-                    <Maximize className="mx-auto mb-2 text-primary" size={24} />
-                    <p className="text-sm text-gray-600">Room Size</p>
-                    <p className="font-semibold">{room.size_sqm} m²</p>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg text-center">
                     <Bed className="mx-auto mb-2 text-primary" size={24} />

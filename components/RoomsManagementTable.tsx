@@ -4,7 +4,7 @@ import { formatCurrency } from '@/lib/utils'
 import { useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
-import { Users, Maximize } from 'lucide-react'
+import { Users } from 'lucide-react'
 
 interface Room {
   id: string
@@ -74,10 +74,6 @@ export default function RoomsManagementTable({ rooms }: { rooms: Room[] }) {
                   <div className="flex items-center gap-1">
                     <Users size={16} />
                     <span>{room.max_guests} guests</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Maximize size={16} />
-                    <span>{room.size_sqm} m²</span>
                   </div>
                 </div>
               </td>
