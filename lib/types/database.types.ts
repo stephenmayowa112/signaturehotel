@@ -14,6 +14,7 @@ export interface Database {
           id: string
           created_at: string
           name: string
+          room_number: string
           description: string
           price_per_night: number
           max_guests: number
@@ -27,6 +28,7 @@ export interface Database {
           id?: string
           created_at?: string
           name: string
+          room_number: string
           description: string
           price_per_night: number
           max_guests: number
@@ -40,6 +42,7 @@ export interface Database {
           id?: string
           created_at?: string
           name?: string
+          room_number?: string
           description?: string
           price_per_night?: number
           max_guests?: number

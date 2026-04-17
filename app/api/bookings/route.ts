@@ -49,7 +49,7 @@ async function sendBookingEmail(booking: any, room: any) {
                 </div>
                 <div class="detail-row">
                   <span class="label">Room:</span>
-                  <span class="value">${room.name}</span>
+                  <span class="value">${room.name} - Room ${room.room_number}</span>
                 </div>
                 <div class="detail-row">
                   <span class="label">Check-in:</span>
@@ -161,7 +161,7 @@ export async function POST(request: Request) {
     // Get room details for email
     const { data: room } = await supabase
       .from('rooms')
-      .select('name, price_per_night')
+      .select('name, room_number, price_per_night')
       .eq('id', body.room_id)
       .single()
 

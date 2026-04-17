@@ -20,11 +20,15 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-[#342208]/65 to-black/80"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(225,183,78,0.25),transparent_40%),radial-gradient(circle_at_85%_70%,rgba(225,183,78,0.18),transparent_48%)]"></div>
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-gilda mb-6 animate-fade-in-up leading-tight drop-shadow-[0_10px_32px_rgba(0,0,0,0.55)]">
-              Signature Int'l Hotel Royal Ltd
+            <p className="hero-eyebrow mb-4 animate-fade-in-up">
+              The Signature of Refined Stays
+            </p>
+            <h1 className="hero-title text-5xl md:text-7xl font-gilda mb-6 animate-fade-in-up leading-tight drop-shadow-[0_10px_32px_rgba(0,0,0,0.55)]">
+              <span className="hero-title-glow block">Signature Int'l</span>
+              <span className="hero-title-shine block">Hotel Royal Ltd</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-[#f3e3c1] animate-fade-in-up animate-delay-200 leading-relaxed">
-              Experience world-class hospitality with premium accommodations and exceptional service designed for discerning guests.
+            <p className="hero-lead text-xl md:text-2xl mb-8 text-[#f3e3c1] animate-fade-in-up animate-delay-200 leading-relaxed">
+              Experience world-class hospitality with <span className="hero-lead-emphasis">premium accommodations</span> and exceptional service designed for discerning guests.
             </p>
             <Link 
               href="/rooms" 

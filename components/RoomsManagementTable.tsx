@@ -10,6 +10,7 @@ interface Room {
   id: string
   created_at: string
   name: string
+  room_number: string
   description: string
   price_per_night: number
   max_guests: number
@@ -52,7 +53,8 @@ export default function RoomsManagementTable({ rooms }: { rooms: Room[] }) {
       <table className="w-full">
         <thead className="bg-primary/10 border-b border-primary/25">
           <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Room</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Room Number</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Category</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Details</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Price</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Amenities</th>
@@ -63,6 +65,9 @@ export default function RoomsManagementTable({ rooms }: { rooms: Room[] }) {
         <tbody className="divide-y divide-primary/15">
           {rooms.map((room) => (
             <tr key={room.id} className="hover:bg-primary/5 transition-colors">
+              <td className="px-6 py-4">
+                <div className="font-bold text-lg text-primary">{room.room_number}</div>
+              </td>
               <td className="px-6 py-4">
                 <div>
                   <div className="font-medium text-[#2d2211]">{room.name}</div>

@@ -5,6 +5,7 @@ import { formatCurrency } from '@/lib/utils'
 interface Room {
   id: string
   name: string
+  room_number: string
   description: string
   price_per_night: number
   max_guests: number
@@ -39,7 +40,12 @@ export default function RoomCard({ room }: { room: Room }) {
 
       {/* Room Details */}
       <div className="p-6">
-        <h3 className="text-2xl font-gilda mb-2">{room.name}</h3>
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-2xl font-gilda">{room.name}</h3>
+          <span className="text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
+            Room {room.room_number}
+          </span>
+        </div>
         <p className="text-[#5e4a2a] mb-4 line-clamp-2">{room.description}</p>
 
         {/* Room Info */}
