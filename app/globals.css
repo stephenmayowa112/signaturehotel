@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .luxury-nav-shell {
-  background: rgba(236, 223, 194, 0.9);
+  background: rgba(204, 186, 149, 0.9);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(200, 167, 74, 0.35);
   box-shadow: 0 10px 30px -22px rgba(120, 83, 19, 0.6);
