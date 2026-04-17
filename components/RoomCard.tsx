@@ -15,14 +15,25 @@ interface Room {
 }
 
 export default function RoomCard({ room }: { room: Room }) {
+  // Map room names to image files
+  const roomImageMap: { [key: string]: string } = {
+    'Signature Superior': '/images/2026/01/room-1.webp',
+    'Signature Royale': '/images/2026/01/room-2.webp',
+    'Signature Executive': '/images/2026/01/room-3.webp',
+    'Signature Business Class': '/images/2026/01/room-4.webp',
+  }
+
+  const roomImage = roomImageMap[room.name] || '/images/2026/01/room-1.webp'
+
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
       {/* Room Image */}
       <div className="relative h-64 bg-gray-200">
-        {/* Placeholder for room image */}
-        <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-          <span className="text-sm">Room Image</span>
-        </div>
+        <img 
+          src={roomImage} 
+          alt={room.name}
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Room Details */}

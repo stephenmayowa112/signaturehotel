@@ -12,8 +12,12 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-gilda text-primary">
-            Signature Int'l Hotel
+          <Link href="/" className="flex items-center">
+            <img 
+              src="/images/2026/01/logo-black.webp" 
+              alt="Signature Int'l Hotel" 
+              className="h-12"
+            />
           </Link>
 
           {/* Desktop Navigation */}

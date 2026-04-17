@@ -10,7 +10,10 @@ export default function HomePage() {
       
       <main>
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <section 
+          className="relative h-screen flex items-center justify-center bg-cover bg-center text-white"
+          style={{ backgroundImage: "url('/images/2026/01/slider-2.webp')" }}
+        >
           <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-gilda mb-6">
@@ -49,7 +52,13 @@ export default function HomePage() {
                   Learn More <ArrowRight size={18} />
                 </Link>
               </div>
-              <div className="bg-gray-200 h-96 rounded-lg"></div>
+              <div className="bg-gray-200 h-96 rounded-lg overflow-hidden">
+                <img 
+                  src="/images/2026/01/welcome-1.webp" 
+                  alt="Hotel Interior" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -133,6 +142,41 @@ export default function HomePage() {
             >
               View Available Rooms <ArrowRight size={20} />
             </Link>
+          </div>
+        </section>
+
+        {/* Gallery Preview Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-gilda mb-4 text-gray-900">
+                Gallery
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Take a visual tour of our beautiful hotel and facilities
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                <div key={num} className="relative h-48 overflow-hidden rounded-lg group">
+                  <img 
+                    src={`/images/2026/01/gallery-${num}.webp`}
+                    alt={`Gallery ${num}`}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <Link 
+                href="/gallery" 
+                className="inline-flex items-center gap-2 text-primary hover:gap-4 transition-all"
+              >
+                View Full Gallery <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
         </section>
       </main>

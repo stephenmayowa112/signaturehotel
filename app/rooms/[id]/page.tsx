@@ -20,6 +20,16 @@ export default async function RoomDetailPage({ params }: { params: Promise<{ id:
     notFound()
   }
 
+  // Map room names to image files
+  const roomImageMap: { [key: string]: string } = {
+    'Signature Superior': '/images/2026/01/room-1.webp',
+    'Signature Royale': '/images/2026/01/room-2.webp',
+    'Signature Executive': '/images/2026/01/room-3.webp',
+    'Signature Business Class': '/images/2026/01/room-4.webp',
+  }
+
+  const roomImage = roomImageMap[room.name] || '/images/2026/01/room-1.webp'
+
   return (
     <>
       <Header />
@@ -40,10 +50,12 @@ export default async function RoomDetailPage({ params }: { params: Promise<{ id:
               {/* Room Details */}
               <div className="lg:col-span-2">
                 {/* Room Image */}
-                <div className="relative h-96 bg-gray-200 rounded-lg mb-8">
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                    <span>Room Image Gallery</span>
-                  </div>
+                <div className="relative h-96 bg-gray-200 rounded-lg mb-8 overflow-hidden">
+                  <img 
+                    src={roomImage} 
+                    alt={room.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Description */}
