@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { ArrowRight, Wifi, Coffee, Car, Utensils, Dumbbell, Waves, Users, Building2 } from 'lucide-react'
+import { ArrowRight, Waves, Coffee, Dumbbell, Utensils, Building2, Users } from 'lucide-react'
 
 export default function HomePage() {
   return (
@@ -78,7 +78,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-100">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <Waves className="text-primary" size={32} />
+                  <Waves className="text-primary" size={32} strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Swimming Pool</h3>
                 <p className="text-gray-600">Relax and unwind in our pristine swimming pool</p>
@@ -86,7 +86,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-200">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <Users className="text-primary" size={32} />
+                  <Coffee className="text-primary" size={32} strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Open Lounge</h3>
                 <p className="text-gray-600">Comfortable lounge area for relaxation and socializing</p>
@@ -94,10 +94,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-300">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <svg className="text-primary" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M12 2v20M2 12h20"/>
-                  </svg>
+                  <Dumbbell className="text-primary" size={32} strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Football Pitch</h3>
                 <p className="text-gray-600">Full-size football pitch for sports enthusiasts</p>
@@ -105,7 +102,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-400">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <Utensils className="text-primary" size={32} />
+                  <Utensils className="text-primary" size={32} strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Restaurant</h3>
                 <p className="text-gray-600">Fine dining with exquisite local and international cuisine</p>
@@ -113,7 +110,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-500">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <Building2 className="text-primary" size={32} />
+                  <Building2 className="text-primary" size={32} strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Conference Hall</h3>
                 <p className="text-gray-600">Modern conference facilities for business meetings and events</p>
@@ -121,14 +118,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-600">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <svg className="text-primary" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-5s-5 2.24-5 5Z"/>
-                    <path d="M12 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-5s-5 2.24-5 5Z"/>
-                    <path d="M7 14V8"/>
-                    <path d="M17 14V8"/>
-                    <path d="M7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
-                    <path d="M17 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
-                  </svg>
+                  <Users className="text-primary" size={32} strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Club</h3>
                 <p className="text-gray-600">Exclusive club for entertainment and leisure</p>
