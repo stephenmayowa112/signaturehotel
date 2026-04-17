@@ -44,11 +44,15 @@ export default function BookingForm({ room }: { room: Room }) {
         })
       })
 
+      const data = await response.json()
+
       if (response.ok) {
-        const data = await response.json()
         router.push(`/booking-confirmation/${data.booking.id}`)
+      } else if (response.status === 409) {
+        // Room not available
+        alert(data.error || 'This room is not available for the selected dates. Please choose different dates.')
       } else {
-        alert('Booking failed. Please try again.')
+        alert(data.error || 'Booking failed. Please try again.')
       }
     } catch (error) {
       console.error('Booking error:', error)

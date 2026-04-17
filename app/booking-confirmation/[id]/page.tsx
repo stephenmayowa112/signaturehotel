@@ -21,7 +21,6 @@ export default async function BookingConfirmationPage({ params }: PageProps) {
       *,
       rooms (
         name,
-        room_number,
         price_per_night,
         bed_type
       )
@@ -68,7 +67,7 @@ export default async function BookingConfirmationPage({ params }: PageProps) {
                 <div className="flex-1">
                   <p className="text-sm text-gray-500">Room</p>
                   <p className="font-semibold text-gray-900">{booking.rooms.name}</p>
-                  <p className="text-sm text-gray-600">Room {booking.rooms.room_number} • {booking.rooms.bed_type}</p>
+                  <p className="text-sm text-gray-600">{booking.rooms.bed_type}</p>
                 </div>
               </div>
 
