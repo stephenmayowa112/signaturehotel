@@ -20,8 +20,12 @@ export default function AdminHeader({ user }: { user: any }) {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
-            <Link href="/admin" className="text-xl font-gilda text-primary">
-              Signature Int'l Hotel Admin
+            <Link href="/admin" className="flex items-center transition-transform duration-300 hover:scale-105">
+              <img 
+                src="/images/signatureLogo.png" 
+                alt="Signature Int'l Hotel Admin" 
+                className="h-12"
+              />
             </Link>
             <nav className="hidden md:flex items-center gap-6">
               <Link href="/admin" className="text-gray-700 hover:text-primary transition">

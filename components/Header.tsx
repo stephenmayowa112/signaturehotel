@@ -14,9 +14,9 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center transition-transform duration-300 hover:scale-105">
             <img 
-              src="/images/2026/01/logo-black.webp" 
+              src="/images/signatureLogo.png" 
               alt="Signature Int'l Hotel" 
-              className="h-12"
+              className="h-16"
             />
           </Link>
 

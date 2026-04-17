@@ -36,8 +36,12 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
-          <Link href="/" className="text-3xl font-gilda text-primary">
-            Signature Int'l Hotel
+          <Link href="/" className="inline-block transition-transform duration-300 hover:scale-105">
+            <img 
+              src="/images/signatureLogo.png" 
+              alt="Signature Int'l Hotel" 
+              className="h-20 mx-auto mb-4"
+            />
           </Link>
           <h2 className="mt-6 text-3xl font-bold text-gray-900">Admin Login</h2>
           <p className="mt-2 text-gray-600">Sign in to access the dashboard</p>
