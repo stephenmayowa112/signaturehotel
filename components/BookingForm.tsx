@@ -68,7 +68,7 @@ export default function BookingForm({ room }: { room: Room }) {
           min={new Date().toISOString().split('T')[0]}
           value={formData.checkIn}
           onChange={(e) => setFormData({ ...formData, checkIn: e.target.value })}
-          className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+          className="luxury-input"
         />
       </div>
 
@@ -80,7 +80,7 @@ export default function BookingForm({ room }: { room: Room }) {
           min={formData.checkIn || new Date().toISOString().split('T')[0]}
           value={formData.checkOut}
           onChange={(e) => setFormData({ ...formData, checkOut: e.target.value })}
-          className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+          className="luxury-input"
         />
       </div>
 
@@ -90,7 +90,7 @@ export default function BookingForm({ room }: { room: Room }) {
           required
           value={formData.numGuests}
           onChange={(e) => setFormData({ ...formData, numGuests: parseInt(e.target.value) })}
-          className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+          className="luxury-input"
         >
           {Array.from({ length: room.max_guests }, (_, i) => i + 1).map((num) => (
             <option key={num} value={num}>{num} {num === 1 ? 'Guest' : 'Guests'}</option>
@@ -105,7 +105,7 @@ export default function BookingForm({ room }: { room: Room }) {
           required
           value={formData.guestName}
           onChange={(e) => setFormData({ ...formData, guestName: e.target.value })}
-          className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+          className="luxury-input"
         />
       </div>
 
@@ -116,7 +116,7 @@ export default function BookingForm({ room }: { room: Room }) {
           required
           value={formData.guestEmail}
           onChange={(e) => setFormData({ ...formData, guestEmail: e.target.value })}
-          className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+          className="luxury-input"
         />
       </div>
 
@@ -127,7 +127,7 @@ export default function BookingForm({ room }: { room: Room }) {
           required
           value={formData.guestPhone}
           onChange={(e) => setFormData({ ...formData, guestPhone: e.target.value })}
-          className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+          className="luxury-input"
         />
       </div>
 
@@ -137,14 +137,14 @@ export default function BookingForm({ room }: { room: Room }) {
           rows={3}
           value={formData.specialRequests}
           onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
-          className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+          className="luxury-input"
         />
       </div>
 
       {nights > 0 && (
-        <div className="bg-gray-50 p-4 rounded">
+        <div className="luxury-soft-section border border-primary/25 p-4 rounded-lg">
           <div className="flex justify-between mb-2">
-            <span className="text-gray-600">{nights} night{nights > 1 ? 's' : ''}</span>
+            <span className="text-[#6b5635]">{nights} night{nights > 1 ? 's' : ''}</span>
             <span className="font-semibold">{formatCurrency(totalPrice)}</span>
           </div>
           <div className="flex justify-between text-lg font-bold">
@@ -157,7 +157,7 @@ export default function BookingForm({ room }: { room: Room }) {
       <button
         type="submit"
         disabled={loading || nights === 0}
-        className="w-full bg-primary text-white py-3 rounded font-semibold hover:bg-opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full luxury-button py-3 rounded-md font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading ? 'Processing...' : 'Book Now'}
       </button>

@@ -10,12 +10,12 @@ export default function GalleryPage() {
       
       <main className="pt-20">
         {/* Page Header */}
-        <section className="bg-gray-900 text-white py-20 px-4">
+        <section className="luxury-page-header text-white py-20 px-4">
           <div className="container mx-auto max-w-6xl text-center">
             <h1 className="text-5xl md:text-6xl font-gilda mb-4">
               Gallery
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-[#f1dfb8]">
               Explore our beautiful hotel through images
             </p>
           </div>
@@ -28,7 +28,7 @@ export default function GalleryPage() {
               {galleryImages.map((num, index) => (
                 <div 
                   key={num} 
-                  className={`relative h-80 overflow-hidden rounded-lg group cursor-pointer hover-lift animate-fade-in-up`}
+                  className={`relative h-80 overflow-hidden rounded-xl group cursor-pointer hover-lift animate-fade-in-up border border-primary/30 shadow-[0_18px_36px_-24px_rgba(116,79,12,0.45)]`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <img 

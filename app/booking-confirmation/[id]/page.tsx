@@ -39,10 +39,10 @@ export default async function BookingConfirmationPage({ params }: PageProps) {
     <>
       <Header />
       
-      <main className="min-h-screen bg-gray-50 py-12 px-4">
+      <main className="min-h-screen luxury-soft-section py-12 px-4">
         <div className="container mx-auto max-w-3xl">
           {/* Success Header */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-6 text-center animate-fade-in-up">
+          <div className="luxury-card p-8 mb-6 text-center animate-fade-in-up">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-4">
               <CheckCircle className="text-green-600" size={48} />
             </div>
@@ -58,7 +58,7 @@ export default async function BookingConfirmationPage({ params }: PageProps) {
           </div>
 
           {/* Booking Details */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-6 animate-fade-in-up animate-delay-200">
+          <div className="luxury-card p-8 mb-6 animate-fade-in-up animate-delay-200">
             <h2 className="text-2xl font-gilda mb-6 text-gray-900">Booking Details</h2>
             
             <div className="space-y-4">
@@ -128,7 +128,7 @@ export default async function BookingConfirmationPage({ params }: PageProps) {
               )}
 
               {/* Price Breakdown */}
-              <div className="bg-gray-50 p-4 rounded-lg">
+              <div className="luxury-soft-section border border-primary/25 p-4 rounded-lg">
                 <div className="flex justify-between mb-2">
                   <span className="text-gray-600">
                     {formatCurrency(booking.rooms.price_per_night)} × {nights} night{nights > 1 ? 's' : ''}
@@ -159,13 +159,13 @@ export default async function BookingConfirmationPage({ params }: PageProps) {
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-600">
             <Link 
               href="/"
-              className="flex-1 text-center bg-white border-2 border-primary text-primary px-6 py-3 rounded font-semibold hover:bg-primary hover:text-white transition-all duration-300"
+              className="flex-1 text-center luxury-button-light px-6 py-3 rounded-md font-semibold transition-all duration-300"
             >
               Back to Home
             </Link>
             <Link 
               href="/rooms"
-              className="flex-1 text-center bg-primary text-white px-6 py-3 rounded font-semibold hover:bg-opacity-90 transition-all duration-300"
+              className="flex-1 text-center luxury-button px-6 py-3 rounded-md font-semibold transition-all duration-300"
             >
               Book Another Room
             </Link>

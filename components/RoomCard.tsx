@@ -26,9 +26,9 @@ export default function RoomCard({ room }: { room: Room }) {
   const roomImage = roomImageMap[room.name] || '/images/2026/01/room-1.webp'
 
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-lg hover-lift transition-all duration-300">
+    <div className="luxury-card overflow-hidden hover-lift transition-all duration-300">
       {/* Room Image */}
-      <div className="relative h-64 bg-gray-200 overflow-hidden group">
+      <div className="relative h-64 overflow-hidden group border-b border-primary/25">
         <img 
           src={roomImage} 
           alt={room.name}
@@ -40,10 +40,10 @@ export default function RoomCard({ room }: { room: Room }) {
       {/* Room Details */}
       <div className="p-6">
         <h3 className="text-2xl font-gilda mb-2">{room.name}</h3>
-        <p className="text-gray-600 mb-4 line-clamp-2">{room.description}</p>
+        <p className="text-[#5e4a2a] mb-4 line-clamp-2">{room.description}</p>
 
         {/* Room Info */}
-        <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
+        <div className="flex items-center gap-4 mb-4 text-sm text-[#5f4d2f]">
           <div className="flex items-center gap-1">
             <Users size={16} />
             <span>{room.max_guests} Guests</span>
@@ -56,13 +56,13 @@ export default function RoomCard({ room }: { room: Room }) {
             {room.amenities.slice(0, 3).map((amenity, index) => (
               <span 
                 key={index}
-                className="text-xs bg-gray-100 px-2 py-1 rounded"
+                className="text-xs bg-primary/10 border border-primary/25 text-[#564225] px-2 py-1 rounded"
               >
                 {amenity}
               </span>
             ))}
             {room.amenities.length > 3 && (
-              <span className="text-xs text-gray-500">
+              <span className="text-xs text-[#7f6640]">
                 +{room.amenities.length - 3} more
               </span>
             )}
@@ -70,16 +70,16 @@ export default function RoomCard({ room }: { room: Room }) {
         </div>
 
         {/* Price and CTA */}
-        <div className="flex items-center justify-between pt-4 border-t">
+        <div className="flex items-center justify-between pt-4 border-t border-primary/25">
           <div>
             <span className="text-2xl font-bold text-primary">
               {formatCurrency(room.price_per_night)}
             </span>
-            <span className="text-gray-600 text-sm"> / night</span>
+            <span className="text-[#6d5735] text-sm"> / night</span>
           </div>
           <Link 
             href={`/rooms/${room.id}`}
-            className="bg-primary text-white px-6 py-2 rounded hover:bg-primary-dark transition-all duration-300 hover:scale-105"
+            className="luxury-button px-6 py-2 rounded-md font-semibold transition-all duration-300 hover:scale-105"
           >
             Book Now
           </Link>

@@ -36,10 +36,10 @@ export default async function RoomDetailPage({ params }: { params: Promise<{ id:
       
       <main className="pt-20">
         {/* Room Header */}
-        <section className="bg-gray-900 text-white py-12 px-4">
+        <section className="luxury-page-header text-white py-12 px-4">
           <div className="container mx-auto max-w-6xl">
             <h1 className="text-4xl md:text-5xl font-gilda mb-2">{room.name}</h1>
-            <p className="text-xl text-gray-300">{room.bed_type}</p>
+            <p className="text-xl text-[#f1dfb8]">{room.bed_type}</p>
           </div>
         </section>
 
@@ -50,7 +50,7 @@ export default async function RoomDetailPage({ params }: { params: Promise<{ id:
               {/* Room Details */}
               <div className="lg:col-span-2">
                 {/* Room Image */}
-                <div className="relative h-96 bg-gray-200 rounded-lg mb-8 overflow-hidden">
+                <div className="relative h-96 rounded-2xl mb-8 overflow-hidden border border-primary/30 shadow-[0_22px_46px_-24px_rgba(116,79,12,0.5)]">
                   <img 
                     src={roomImage} 
                     alt={room.name}
@@ -61,19 +61,19 @@ export default async function RoomDetailPage({ params }: { params: Promise<{ id:
                 {/* Description */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-gilda mb-4">About This Room</h2>
-                  <p className="text-gray-600 leading-relaxed">{room.description}</p>
+                  <p className="text-[#5c4828] leading-relaxed">{room.description}</p>
                 </div>
 
                 {/* Room Info */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
-                  <div className="bg-gray-50 p-4 rounded-lg text-center">
+                  <div className="luxury-card p-4 text-center">
                     <Users className="mx-auto mb-2 text-primary" size={24} />
-                    <p className="text-sm text-gray-600">Max Guests</p>
+                    <p className="text-sm text-[#6a5432]">Max Guests</p>
                     <p className="font-semibold">{room.max_guests}</p>
                   </div>
-                  <div className="bg-gray-50 p-4 rounded-lg text-center">
+                  <div className="luxury-card p-4 text-center">
                     <Bed className="mx-auto mb-2 text-primary" size={24} />
-                    <p className="text-sm text-gray-600">Bed Type</p>
+                    <p className="text-sm text-[#6a5432]">Bed Type</p>
                     <p className="font-semibold text-sm">{room.bed_type}</p>
                   </div>
                 </div>
@@ -85,7 +85,7 @@ export default async function RoomDetailPage({ params }: { params: Promise<{ id:
                     {room.amenities.map((amenity: string, index: number) => (
                       <div key={index} className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="text-gray-700">{amenity}</span>
+                        <span className="text-[#574526]">{amenity}</span>
                       </div>
                     ))}
                   </div>
@@ -94,12 +94,12 @@ export default async function RoomDetailPage({ params }: { params: Promise<{ id:
 
               {/* Booking Card */}
               <div className="lg:col-span-1">
-                <div className="bg-white border border-gray-200 rounded-lg p-6 sticky top-24">
+                <div className="luxury-card p-6 sticky top-24">
                   <div className="mb-6">
                     <div className="text-3xl font-bold text-primary mb-1">
                       {formatCurrency(room.price_per_night)}
                     </div>
-                    <div className="text-gray-600">per night</div>
+                    <div className="text-[#6b5635]">per night</div>
                   </div>
                   
                   <BookingForm room={room} />

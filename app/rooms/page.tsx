@@ -18,12 +18,12 @@ export default async function RoomsPage() {
       
       <main className="pt-20">
         {/* Page Header */}
-        <section className="bg-gray-900 text-white py-20 px-4">
+        <section className="luxury-page-header text-white py-20 px-4">
           <div className="container mx-auto max-w-6xl text-center">
             <h1 className="text-5xl md:text-6xl font-gilda mb-4">
               Our Rooms & Suites
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-[#f1dfb8]">
               From Signature Superior to Business Class - Choose your perfect accommodation
             </p>
           </div>
