@@ -41,7 +41,7 @@ export default function RoomsManagementTable({ rooms }: { rooms: Room[] }) {
 
   if (rooms.length === 0) {
     return (
-      <div className="p-8 text-center text-gray-500">
+      <div className="p-8 text-center text-[#7a623b]">
         No rooms found
       </div>
     )
@@ -50,51 +50,51 @@ export default function RoomsManagementTable({ rooms }: { rooms: Room[] }) {
   return (
     <div className="overflow-x-auto">
       <table className="w-full">
-        <thead className="bg-gray-50">
+        <thead className="bg-primary/10 border-b border-primary/25">
           <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Room</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Details</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Price</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Amenities</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Room</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Details</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Price</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Amenities</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Status</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-[#6a5431] uppercase">Actions</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-200">
+        <tbody className="divide-y divide-primary/15">
           {rooms.map((room) => (
-            <tr key={room.id} className="hover:bg-gray-50">
+            <tr key={room.id} className="hover:bg-primary/5 transition-colors">
               <td className="px-6 py-4">
                 <div>
-                  <div className="font-medium text-gray-900">{room.name}</div>
-                  <div className="text-sm text-gray-500">{room.bed_type}</div>
+                  <div className="font-medium text-[#2d2211]">{room.name}</div>
+                  <div className="text-sm text-[#6e5a37]">{room.bed_type}</div>
                 </div>
               </td>
               <td className="px-6 py-4">
-                <div className="flex gap-4 text-sm text-gray-600">
+                <div className="flex gap-4 text-sm text-[#5e4a2a]">
                   <div className="flex items-center gap-1">
-                    <Users size={16} />
+                    <Users size={16} className="text-primary" />
                     <span>{room.max_guests} guests</span>
                   </div>
                 </div>
               </td>
-              <td className="px-6 py-4 text-sm font-medium text-gray-900">
+              <td className="px-6 py-4 text-sm font-medium text-[#2d2211]">
                 {formatCurrency(parseFloat(room.price_per_night.toString()))}
-                <div className="text-xs text-gray-500">per night</div>
+                <div className="text-xs text-[#7a623b]">per night</div>
               </td>
               <td className="px-6 py-4">
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-[#5e4a2a]">
                   {room.amenities.length} amenities
-                  <div className="text-xs text-gray-500 mt-1">
+                  <div className="text-xs text-[#7a623b] mt-1">
                     {room.amenities.slice(0, 2).join(', ')}
                     {room.amenities.length > 2 && '...'}
                   </div>
                 </div>
               </td>
               <td className="px-6 py-4">
-                <span className={`px-2 py-1 text-xs font-semibold rounded ${
+                <span className={`px-2.5 py-1 text-xs font-semibold rounded-full border ${
                   room.is_available 
-                    ? 'bg-green-100 text-green-800' 
-                    : 'bg-red-100 text-red-800'
+                    ? 'bg-[#dff4e3] text-[#185433] border-[#b9dfc2]' 
+                    : 'bg-[#fde7e7] text-[#8a2d2d] border-[#f5c5c5]'
                 }`}>
                   {room.is_available ? 'Available' : 'Unavailable'}
                 </span>
@@ -103,10 +103,10 @@ export default function RoomsManagementTable({ rooms }: { rooms: Room[] }) {
                 <button
                   onClick={() => toggleAvailability(room.id, room.is_available)}
                   disabled={updating === room.id}
-                  className={`text-xs px-3 py-1 rounded transition disabled:opacity-50 ${
+                  className={`text-xs px-3 py-1.5 rounded-full transition-colors disabled:opacity-50 ${
                     room.is_available
-                      ? 'bg-red-600 text-white hover:bg-red-700'
-                      : 'bg-green-600 text-white hover:bg-green-700'
+                      ? 'bg-[#a33f3f] text-white hover:bg-[#853333]'
+                      : 'bg-[#1f7a3f] text-white hover:bg-[#185f32]'
                   }`}
                 >
                   {updating === room.id 

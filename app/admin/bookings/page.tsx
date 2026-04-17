@@ -24,18 +24,18 @@ export default async function AdminBookingsPage() {
     .order('created_at', { ascending: false })
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen luxury-soft-section">
       <AdminHeader user={user} />
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">All Bookings</h1>
-          <p className="text-gray-600">Manage and track all hotel reservations</p>
+          <h1 className="text-3xl font-gilda mb-2 text-[#2d2211]">All Bookings</h1>
+          <p className="text-[#6a5431]">Manage and track all hotel reservations</p>
         </div>
 
         {/* Bookings Table */}
-        <div className="bg-white rounded-lg shadow">
-          <div className="p-6 border-b">
+        <div className="luxury-card">
+          <div className="p-6 border-b border-primary/25">
             <h2 className="text-xl font-semibold">Booking List</h2>
           </div>
           <BookingsTable bookings={bookings || []} />

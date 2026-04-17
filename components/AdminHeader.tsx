@@ -16,7 +16,7 @@ export default function AdminHeader({ user }: { user: any }) {
   }
 
   return (
-    <header className="bg-white shadow">
+    <header className="luxury-nav-shell">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
@@ -28,13 +28,13 @@ export default function AdminHeader({ user }: { user: any }) {
               />
             </Link>
             <nav className="hidden md:flex items-center gap-6">
-              <Link href="/admin" className="text-gray-700 hover:text-primary transition">
+              <Link href="/admin" className="luxury-nav-link">
                 Dashboard
               </Link>
-              <Link href="/admin/bookings" className="text-gray-700 hover:text-primary transition">
+              <Link href="/admin/bookings" className="luxury-nav-link">
                 Bookings
               </Link>
-              <Link href="/admin/rooms" className="text-gray-700 hover:text-primary transition">
+              <Link href="/admin/rooms" className="luxury-nav-link">
                 Rooms
               </Link>
             </nav>
@@ -43,14 +43,14 @@ export default function AdminHeader({ user }: { user: any }) {
           <div className="flex items-center gap-4">
             <Link 
               href="/"
-              className="flex items-center gap-2 text-gray-700 hover:text-primary transition"
+              className="flex items-center gap-2 text-[#3d2e14] hover:text-primary-dark transition"
             >
               <Home size={18} />
               <span className="hidden md:inline">View Site</span>
             </Link>
             <button
               onClick={handleLogout}
-              className="flex items-center gap-2 text-gray-700 hover:text-red-600 transition"
+              className="flex items-center gap-2 text-[#3d2e14] hover:text-red-700 transition"
             >
               <LogOut size={18} />
               <span className="hidden md:inline">Logout</span>
