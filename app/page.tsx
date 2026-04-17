@@ -19,7 +19,7 @@ export default function HomePage() {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-[#342208]/65 to-black/80"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(225,183,78,0.25),transparent_40%),radial-gradient(circle_at_85%_70%,rgba(225,183,78,0.18),transparent_48%)]"></div>
-          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <div className="hero-glass-panel relative z-10 text-center px-4 max-w-4xl mx-auto pt-16 md:pt-20">
             <p className="hero-eyebrow mb-4 animate-fade-in-up">
               The Signature of Refined Stays
             </p>

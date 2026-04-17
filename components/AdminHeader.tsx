@@ -43,14 +43,14 @@ export default function AdminHeader({ user }: { user: any }) {
           <div className="flex items-center gap-4">
             <Link 
               href="/"
-              className="flex items-center gap-2 text-[#3d2e14] hover:text-primary-dark transition"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel text-[#f4e8cc] hover:text-[#fff6de] transition"
             >
               <Home size={18} />
               <span className="hidden md:inline">View Site</span>
             </Link>
             <button
               onClick={handleLogout}
-              className="flex items-center gap-2 text-[#3d2e14] hover:text-red-700 transition"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel text-[#f4e8cc] hover:text-[#ffd2d2] transition"
             >
               <LogOut size={18} />
               <span className="hidden md:inline">Logout</span>

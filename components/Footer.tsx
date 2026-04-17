@@ -3,12 +3,12 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-[#120d05] via-[#24180a] to-[#3b2810] text-[#f5ead0] border-t border-primary/35">
+    <footer className="glass-footer-shell relative overflow-hidden text-[#f5ead0] border-t border-primary/35">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(216,172,70,0.18),transparent_46%),radial-gradient(circle_at_80%_100%,rgba(216,172,70,0.16),transparent_48%)]"></div>
       <div className="container mx-auto px-4 py-12">
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
-          <div>
+          <div className="footer-glass-card">
             <h3 className="text-2xl font-gilda text-white mb-4">Signature Int'l Hotel</h3>
             <p className="text-sm text-[#e7d5ab] leading-relaxed">
               Experience world-class hospitality with premium accommodations and exceptional service designed for discerning guests.
@@ -16,7 +16,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="footer-glass-card">
             <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/rooms" className="text-[#e7d5ab] hover:text-[#ffdf96] transition">Rooms</Link></li>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="footer-glass-card">
             <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-[#e7d5ab]">
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
 
           {/* Social Media */}
-          <div>
+          <div className="footer-glass-card">
             <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full border border-primary/45 bg-white/5 flex items-center justify-center text-[#f6e3b7] hover:text-[#ffdf96] hover:border-primary transition" aria-label="Facebook">

@@ -47,7 +47,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-primary/30 animate-fade-in">
+          <nav className="md:hidden mt-2 mb-3 px-4 py-4 rounded-2xl border border-primary/30 glass-panel animate-fade-in">
             <div className="flex flex-col space-y-4">
               <Link href="/" className="luxury-nav-link">
                 Home
