@@ -81,7 +81,7 @@ export default function FacilitiesPage() {
                 const Icon = facility.icon
                 return (
                   <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                       <Icon className="text-primary" size={32} />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">{facility.title}</h3>

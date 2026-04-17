@@ -80,7 +80,7 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-100">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaSwimmingPool className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Swimming Pool</h3>
@@ -88,7 +88,7 @@ export default function HomePage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-200">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaCouch className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Open Lounge</h3>
@@ -96,7 +96,7 @@ export default function HomePage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaFutbol className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Football Pitch</h3>
@@ -104,7 +104,7 @@ export default function HomePage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-400">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaUtensils className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Restaurant</h3>
@@ -112,7 +112,7 @@ export default function HomePage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-500">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaBuilding className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Conference Hall</h3>
@@ -120,7 +120,7 @@ export default function HomePage() {
               </div>
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-600">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
                   <FaGlassCheers className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Club</h3>

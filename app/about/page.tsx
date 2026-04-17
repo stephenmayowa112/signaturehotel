@@ -42,7 +42,7 @@ export default function AboutPage() {
             <h2 className="text-4xl font-gilda mb-12 text-center">Our Values</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <Award className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Excellence</h3>
@@ -52,7 +52,7 @@ export default function AboutPage() {
               </div>
 
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <Heart className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Hospitality</h3>
@@ -62,7 +62,7 @@ export default function AboutPage() {
               </div>
 
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <Star className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Quality</h3>
@@ -72,7 +72,7 @@ export default function AboutPage() {
               </div>
 
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                   <Users className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Community</h3>
