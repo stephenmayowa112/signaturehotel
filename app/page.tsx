@@ -12,7 +12,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <section 
           className="relative h-screen flex items-center justify-center bg-cover bg-center text-white"
-          style={{ backgroundImage: "url('/images/2026/01/slider-2.webp')" }}
+          style={{ backgroundImage: "url('/images/45788.jpg')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60"></div>
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
