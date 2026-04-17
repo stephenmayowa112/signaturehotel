@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { ArrowRight, Waves, Coffee, Dumbbell, Utensils, Building2, Users } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+import { FaSwimmingPool, FaCouch, FaFutbol, FaUtensils, FaBuilding, FaGlassCheers } from 'react-icons/fa'
 
 export default function HomePage() {
   return (
@@ -78,7 +79,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-100">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <Waves className="text-primary" size={32} strokeWidth={2} />
+                  <FaSwimmingPool className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Swimming Pool</h3>
                 <p className="text-gray-600">Relax and unwind in our pristine swimming pool</p>
@@ -86,7 +87,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-200">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <Coffee className="text-primary" size={32} strokeWidth={2} />
+                  <FaCouch className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Open Lounge</h3>
                 <p className="text-gray-600">Comfortable lounge area for relaxation and socializing</p>
@@ -94,7 +95,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-300">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <Dumbbell className="text-primary" size={32} strokeWidth={2} />
+                  <FaFutbol className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Football Pitch</h3>
                 <p className="text-gray-600">Full-size football pitch for sports enthusiasts</p>
@@ -102,7 +103,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-400">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <Utensils className="text-primary" size={32} strokeWidth={2} />
+                  <FaUtensils className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Restaurant</h3>
                 <p className="text-gray-600">Fine dining with exquisite local and international cuisine</p>
@@ -110,7 +111,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-500">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <Building2 className="text-primary" size={32} strokeWidth={2} />
+                  <FaBuilding className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Conference Hall</h3>
                 <p className="text-gray-600">Modern conference facilities for business meetings and events</p>
@@ -118,7 +119,7 @@ export default function HomePage() {
 
               <div className="bg-white p-8 rounded-lg text-center hover-lift animate-fade-in-up animate-delay-600">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4 transition-transform duration-300 hover:scale-110">
-                  <Users className="text-primary" size={32} strokeWidth={2} />
+                  <FaGlassCheers className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Club</h3>
                 <p className="text-gray-600">Exclusive club for entertainment and leisure</p>
