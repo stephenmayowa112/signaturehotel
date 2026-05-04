@@ -98,7 +98,7 @@ async function sendBookingEmail(booking: any, room: any) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Signature Hotel <bookings@signaturehotel.com>',
+        from: 'Signature Hotel <signaturehotelroyalint@gmail.com>',
         to: [booking.guest_email],
         subject: `Booking Confirmation - ${booking.id.slice(0, 8).toUpperCase()}`,
         html: emailHtml,

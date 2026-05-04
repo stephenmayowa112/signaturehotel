@@ -83,6 +83,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 16px 30px -24px rgba(54, 36, 10, 0.72), inset 0 1px 0 rgba(255, 243, 211, 0.25);
 }
 
+.luxury-nav-shell-scrolled {
+  background:
+    linear-gradient(118deg, rgba(17, 11, 3, 0.95) 0%, rgba(42, 28, 10, 0.92) 52%, rgba(76, 53, 20, 0.88) 100%);
+  border-bottom-color: rgba(231, 194, 105, 0.65);
+  box-shadow: 0 20px 34px -22px rgba(20, 13, 4, 0.84), inset 0 1px 0 rgba(255, 247, 225, 0.3);
+}
+
 .luxury-nav-link {
   color: #f6e5be;
   font-weight: 500;

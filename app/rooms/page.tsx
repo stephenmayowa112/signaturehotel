@@ -3,6 +3,9 @@ import Footer from '@/components/Footer'
 import { createClient } from '@/lib/supabase/server'
 import RoomCard from '@/components/RoomCard'
 
+// Cache this page for 60 seconds
+export const revalidate = 60
+
 export default async function RoomsPage() {
   const supabase = await createClient()
   
