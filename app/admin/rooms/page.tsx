@@ -28,7 +28,7 @@ export default async function AdminRoomsPage() {
   }, {})
 
   return (
-    <div className="min-h-screen luxury-soft-section">
+    <div className="min-h-screen luxury-soft-section pt-20">
       <AdminHeader user={user} />
       
       <main className="container mx-auto px-4 py-8">

@@ -34,7 +34,7 @@ export default async function AdminDashboard() {
   const totalRevenue = bookings?.reduce((sum, b) => sum + parseFloat(b.total_price), 0) || 0
 
   return (
-    <div className="min-h-screen luxury-soft-section">
+    <div className="min-h-screen luxury-soft-section pt-20">
       <AdminHeader user={user} />
       
       <main className="container mx-auto px-4 py-8">

@@ -24,7 +24,7 @@ export default async function AdminBookingsPage() {
     .order('created_at', { ascending: false })
 
   return (
-    <div className="min-h-screen luxury-soft-section">
+    <div className="min-h-screen luxury-soft-section pt-20">
       <AdminHeader user={user} />
       
       <main className="container mx-auto px-4 py-8">
